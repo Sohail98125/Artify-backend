@@ -11,6 +11,10 @@ const router = require("./routes/artRoutes")
 app.use(cors())
 app.use(express.json())
 app.use("/api", router)
+app.get('/', (req, res) => {
+  res.send('API is working...')
+})
+
 
 const PORT = process.env.PORT
 app.listen(PORT, () => {
